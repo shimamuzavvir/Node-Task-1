@@ -5,6 +5,11 @@ import fs from "fs";
 const app = express();
 const PORT = 4000;
 
+
+app.get('/',(req,res)=>{
+    res.status(200).send(`<h1 style="color:blue">WELCOME</h1>`)
+})
+
 // Endpoint for writing timestamp data
 app.get('/write', (req, res) => {
     let today = format(new Date(), 'dd-mm-yyyy-hh=mm-ss');
